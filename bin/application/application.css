@@ -1,0 +1,59 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.createButton {
+-fx-border-color: rgba(255.0, 255.0, 255.0, 0.8);
+-fx-border-radius: 8.0;
+-fx-padding: 6.0 6.0 6.0 6.0;
+-fx-font: bold italic 12.0pt "LucidaBrightDemiBold";
+-fx-pref-width:100;
+-fx-height:10;
+-fx-marging: 10.0 10.0 10.0 10.0;
+}
+
+.labelFormTitles {
+	-fc-text-align: center;
+	-fx-font-family: Gill Sans, Verdana;
+	-fx-font-size: 15.0px;
+	-fx-line-height: 14.0px;
+	-fx-text-transform: uppercase;
+	-fx-letter-spacing: 2.0px;
+	-fx-font-weight: bold;
+	-fx-text-fill:#4169E1;
+	-fx-pref-width:120.0;
+}
+
+.labelFormAttributes {
+-fx-font-family: Gill Sans, Verdana;
+	-fx-font-size: 13.0px;
+	-fx-line-height: 14.0px;
+	-fx-text-transform: uppercase;
+	-fx-letter-spacing: 2.0px;
+	-fx-font-weight: bold;
+	-fx-color:#4169E1;
+	-fx-pref-width:75.0;
+}
+
+.VBoxForm {
+	-fx-border-radius: 5.0px;
+	-fx-border-style: solid;
+	-fx-border-width: 2.0;
+	-fx-border-color: blue; 
+	-fx-padding: 10.0 10.0 10.0 10.0;
+	-fx-pref-width:150.0;
+	-fx-fill-height:false;
+}
+.PrincipalVBoxForm {
+	-fx-border-radius: 5.0px;
+	-fx-border-style: solid;
+	-fx-border-width: 2.0;
+	-fx-border-color: blue; 
+	-fx-padding: 10.0 10.0 10.0 10.0;
+	-fx-pref-width:150.0;
+	-fx-fill-height:false;
+}
+
+.AttributesTextField {
+	-fx-pref-width:30.0;
+}
+
+				 
