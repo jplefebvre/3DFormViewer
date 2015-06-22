@@ -10,9 +10,8 @@ public class Camera {
     private PerspectiveCamera camera;
     private Rotate cameraRotateX, cameraRotateY, cameraRotateZ;
     private Translate cameraTranslate;
-     
-    private double mouseOldX, mouseNewX;
-    private double mouseOldY, mouseNewY;
+    private double oldXPosition, newXPosition;
+    private double oldYPosition, newYPosition;
 	
     public Camera(){
     	
@@ -29,18 +28,18 @@ public class Camera {
     }
 
     public void onMousePressed(MouseEvent mouseEvent) {
-         mouseOldX = mouseNewX = mouseEvent.getSceneX();
-         mouseOldY = mouseNewY = mouseEvent.getSceneY();
+         oldXPosition = newXPosition = mouseEvent.getSceneX();
+         oldYPosition = newYPosition = mouseEvent.getSceneY();
     }
      
     public void onMouseDragged(MouseEvent mouseEvent) {
-         mouseOldX = mouseNewX;
-         mouseOldY = mouseNewY;
-         mouseNewX = mouseEvent.getSceneX();
-         mouseNewY = mouseEvent.getSceneY();
+         oldXPosition = newXPosition;
+         oldYPosition = newYPosition;
+         newXPosition = mouseEvent.getSceneX();
+         newYPosition = mouseEvent.getSceneY();
           
-         double mouseDeltaX = (mouseNewX - mouseOldX);
-         double mouseDeltaY = (mouseNewY - mouseOldY);
+         double mouseDeltaX = (newXPosition - oldXPosition);
+         double mouseDeltaY = (newYPosition - oldYPosition);
           
          cameraRotateX.setAngle(cameraRotateX.getAngle() - mouseDeltaY);
          cameraRotateY.setAngle(cameraRotateY.getAngle() + mouseDeltaX);

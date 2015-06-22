@@ -1,11 +1,11 @@
-package application;
+package view;
 	
 import model.Camera;
 import model.Cube3D;
 import model.Cylinder3D;
+import model.Form3DMenuBar;
+import model.Form3DSelectorMenu;
 import model.Sphere3D;
-import view.Form3DMenuBar;
-import view.Form3DSelectorMenu;
 import javafx.animation.Animation;
 import javafx.animation.RotateTransition;
 import javafx.application.Application;
@@ -52,8 +52,7 @@ public class Main extends Application {
 	        Form3DSelectorMenu selectorMenu = new Form3DSelectorMenu(root,scene,primaryStage.heightProperty(), menuBar.getMenuBar().heightProperty());
 	        root.getChildren().add(selectorMenu.getVBoxSelector());
 	        selectorMenu.getVBoxSelector().setLayoutX(5);
-	        
-	        
+
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
 	}

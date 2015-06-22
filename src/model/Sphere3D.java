@@ -23,7 +23,7 @@ public class Sphere3D extends Abstract3DForm {
     	if(color == null)
     		color = Color.BLACK;
     	this.radius = new SimpleIntegerProperty(radius);
-    	sphere = new Sphere(radius);
+    	sphere = new Sphere(radius*0.8);
     	pm = new PhongMaterial();
     	pm.setDiffuseColor(color);
     	pm.setSpecularColor(color);

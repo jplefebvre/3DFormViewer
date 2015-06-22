@@ -26,7 +26,7 @@ public class Cylinder3D extends Abstract3DForm {
     		color = Color.BLACK;
     	this.radius = new SimpleIntegerProperty(radius);
     	this.height = new SimpleIntegerProperty(height);
-    	cylinder = new Cylinder(radius, height);
+    	cylinder = new Cylinder(radius*0.8, height);
     	pm = new PhongMaterial();
     	pm.setDiffuseColor(color);
     	pm.setSpecularColor(color);
