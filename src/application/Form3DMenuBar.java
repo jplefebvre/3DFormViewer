@@ -1,4 +1,4 @@
-package model;
+package application;
 
 import javafx.beans.property.ReadOnlyDoubleProperty;
 import javafx.scene.control.Menu;

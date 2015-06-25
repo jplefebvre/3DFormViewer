@@ -1,4 +1,4 @@
-package model;
+package application;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
@@ -11,27 +11,24 @@ import javafx.scene.shape.Cylinder;
 import javafx.scene.shape.Sphere;
 import javafx.stage.Stage;
 
-public class Cylinder3D extends Abstract3DForm {
+public class Sphere3D extends Abstract3DForm {
 
-//	radius, height
     private final IntegerProperty radius;
-    private final IntegerProperty height;
-    private Cylinder cylinder;
+    private Sphere sphere;
     private PhongMaterial pm;
     
     
-    public Cylinder3D(int radius, int height, Color color){
+    public Sphere3D(int radius, Color color){
     	super(color);
     	if(color == null)
     		color = Color.BLACK;
     	this.radius = new SimpleIntegerProperty(radius);
-    	this.height = new SimpleIntegerProperty(height);
-    	cylinder = new Cylinder(radius*0.8, height);
+    	sphere = new Sphere(radius*0.8);
     	pm = new PhongMaterial();
     	pm.setDiffuseColor(color);
-    	pm.setSpecularColor(color);
-    	cylinder.setMaterial(pm);
     	
+    	pm.setSpecularColor(color);
+    	sphere.setMaterial(pm);
     }
 
     public int getRadius() {
@@ -41,38 +38,22 @@ public class Cylinder3D extends Abstract3DForm {
     public void setRadius(int radius) {
         this.radius.set(radius);
     }
-
+    
     /* This method automatically update the view when the property is modified */
     public IntegerProperty radiusProperty() {
         return radius;
     }
     
-    public int getHeight() {
-        return height.get();
+    @Override
+    public Sphere getSphere(){
+    	return sphere;
     }
-
-    public void setHeight(int height) {
-        this.height.set(height);
-    }
-    
-    /* This method automatically update the view when the property is modified */
-    public IntegerProperty heightProperty() {
-        return height;
-    }
-    
-
     @Override
     public Box getCube() {
         return null;
     }
-
-	@Override
-	public Sphere getSphere() {
-		return null;
-	}
-
 	@Override
 	public Cylinder getCylinder() {
-		return cylinder;
+		return null;
 	}
 }

@@ -1,4 +1,4 @@
-package model;
+package application;
 
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.input.MouseEvent;
@@ -7,12 +7,12 @@ import javafx.scene.transform.Translate;
 
 public class Camera {
 
+    private double oldXPosition, newXPosition;
+    private double oldYPosition, newYPosition;
     private PerspectiveCamera camera;
     private Rotate cameraRotateX, cameraRotateY, cameraRotateZ;
     private Translate cameraTranslate;
-    private double oldXPosition, newXPosition;
-    private double oldYPosition, newYPosition;
-	
+    
     public Camera(){
     	
     	   camera = new PerspectiveCamera(true);

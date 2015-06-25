@@ -1,4 +1,4 @@
-package model;
+package application;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
@@ -21,7 +21,6 @@ public abstract class Abstract3DForm {
 	    private final ObjectProperty<Paint> color;
 	    private Stage primaryStage = null;
 	    
-	    /* This method automatically update the view when the property is modified */
 	    public Abstract3DForm(Color color){
 	    	if(color == null)
 	    		color = Color.BLACK;

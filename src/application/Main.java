@@ -1,11 +1,5 @@
-package view;
+package application;
 	
-import model.Camera;
-import model.Cube3D;
-import model.Cylinder3D;
-import model.Form3DMenuBar;
-import model.Form3DSelectorMenu;
-import model.Sphere3D;
 import javafx.animation.Animation;
 import javafx.animation.RotateTransition;
 import javafx.application.Application;
@@ -45,7 +39,7 @@ public class Main extends Application {
 	        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 	        root.setStyle("-fx-background-color: white;");
 
-	        Form3DMenuBar menuBar = new Form3DMenuBar(primaryStage.widthProperty());
+	        Form3DMenuBar menuBar = new Form3DMenuBar(scene.widthProperty());
 	        root.getChildren().add(menuBar.getMenuBar());
 	        menuBar.getMenuBar().setLayoutX(0);
 	        menuBar.getMenuBar().setLayoutY(0);
